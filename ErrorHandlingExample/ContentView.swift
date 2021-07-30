@@ -1,39 +1,58 @@
 import SwiftUI
 
-enum ExampleError: LocalizedError {
-    case validationFailed
+enum ValidationError: LocalizedError {
+    case missingName
 
     var errorDescription: String? {
         switch self {
-        case .validationFailed:
+        case .missingName:
             return "Something is wrong here."
+        }
+    }
+}
+
+struct Person {
+    var name: String = ""
+
+    func validate() throws {
+        if name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            throw ValidationError.missingName
         }
     }
 }
 
 struct ContentView: View {
     @EnvironmentObject var errorHandling: ErrorHandling
+    @State var person = Person()
+    @State var showOkAlert = false
 
     var body: some View {
-        VStack(spacing: 10) {
-            Button("Validate") {
+        Form {
+            TextField("Name", text: $person.name)
+
+            // Version with manual do / try / catch
+            Button("Submit") {
                 do {
-                    try self.validate()
+                    try person.validate()
+                    self.showOkAlert = true
                 } catch {
                     self.errorHandling.handle(error: error)
                 }
             }
 
-            TryButton("Validate") {
-                try self.validate()
+            // Simplified version with TryButton
+            TryButton("Submit") {
+                try person.validate()
+                self.showOkAlert = true
             }
-
-            AlertExampleView()
         }
-    }
-
-    func validate() throws {
-        throw ExampleError.validationFailed
+        .alert(isPresented: $showOkAlert) {
+            Alert(
+                title: Text("Alert"),
+                message: Text("Everything is alright"),
+                dismissButton: .default(Text("Ok"))
+            )
+        }
     }
 }
 

@@ -1,5 +1,7 @@
 import SwiftUI
 
+/// `TryButton` is a `Button` that allows to throw errors in the action block
+/// and delegates the Error to the `ErrorHandling` service in the environment.
 public struct TryButton<Label>: View where Label: View {
     var action: () throws -> Void
     @ViewBuilder var label: () -> Label

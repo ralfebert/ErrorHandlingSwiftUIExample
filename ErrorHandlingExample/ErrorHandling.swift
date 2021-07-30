@@ -14,7 +14,7 @@ class ErrorHandling: ObservableObject {
     }
 }
 
-struct WithErrorHandlingAlertModifier: ViewModifier {
+struct HandleErrorsByShowingAlertViewModifier: ViewModifier {
     @StateObject var errorHandling = ErrorHandling()
 
     func body(content: Content) -> some View {
@@ -40,6 +40,6 @@ struct WithErrorHandlingAlertModifier: ViewModifier {
 
 extension View {
     func withErrorHandling() -> some View {
-        modifier(WithErrorHandlingAlertModifier())
+        modifier(HandleErrorsByShowingAlertViewModifier())
     }
 }
