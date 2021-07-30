@@ -23,6 +23,11 @@ struct ContentView: View {
                     self.errorHandling.handle(error: error)
                 }
             }
+
+            TryButton("Validate") {
+                try self.validate()
+            }
+
             AlertExampleView()
         }
     }

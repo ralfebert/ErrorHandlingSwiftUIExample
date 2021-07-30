@@ -13,6 +13,7 @@
 		BF34BE3D26B3276E00D378F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF34BE3C26B3276E00D378F9 /* Preview Assets.xcassets */; };
 		BF34BE4526B3279F00D378F9 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34BE4426B3279F00D378F9 /* ErrorHandling.swift */; };
 		BF34BE4726B32B4F00D378F9 /* AlertExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34BE4626B32B4F00D378F9 /* AlertExampleView.swift */; };
+		BF34BE4926B3F26F00D378F9 /* TryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34BE4826B3F26F00D378F9 /* TryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BF34BE3E26B3276E00D378F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF34BE4426B3279F00D378F9 /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
 		BF34BE4626B32B4F00D378F9 /* AlertExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExampleView.swift; sourceTree = "<group>"; };
+		BF34BE4826B3F26F00D378F9 /* TryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				BF34BE3B26B3276E00D378F9 /* Preview Content */,
 				BF34BE4426B3279F00D378F9 /* ErrorHandling.swift */,
 				BF34BE4626B32B4F00D378F9 /* AlertExampleView.swift */,
+				BF34BE4826B3F26F00D378F9 /* TryButton.swift */,
 			);
 			path = ErrorHandlingExample;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF34BE4926B3F26F00D378F9 /* TryButton.swift in Sources */,
 				BF34BE4726B32B4F00D378F9 /* AlertExampleView.swift in Sources */,
 				BF34BE4526B3279F00D378F9 /* ErrorHandling.swift in Sources */,
 				BF34BE3826B3276E00D378F9 /* ContentView.swift in Sources */,
